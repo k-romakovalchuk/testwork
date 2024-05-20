@@ -1,0 +1,229 @@
+.swing-trade {
+  margin-bottom: 100px;
+  &__item {
+    display: flex;
+  }
+
+  &__main-phone {
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &__item-name {
+    flex-basis: 80%;
+    padding: 14px 16px 14px 16px;
+
+    @include onDesktop {
+      flex-basis: 40%;
+    }
+  }
+
+  &__list > div:nth-child(odd) {
+    background-color: #edfaf1;
+  }
+
+  &__name {
+    color: $green-color
+  }
+
+  &__subscription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+
+    &--desktop {
+      @include onDesktop {
+        position: absolute;
+        bottom: 80%;
+        right: 16%;
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item-check {
+    background-image: url(../images/swing-trade/tick.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-basis: 20%;
+
+    &--color-green {
+      background-image: none;
+    }
+
+    &--position {
+      @include onDesktop {
+        position: relative;
+      }
+    }
+
+    @include onDesktop {
+      flex-basis: 30%;
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin: 0;
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin: 0;
+
+    &--text--green {
+      color: $green-color;
+    }
+
+  }
+
+  &__switcher-block {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  &__switcher {
+    width: 45.6px;
+    height: 24px;
+    padding: 2px 23.6px 2px 2px;
+    border-radius: 1000px;
+
+    cursor: pointer;
+    background-color: #E0E3EA;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 50%;
+      padding-bottom: 50%;
+      border-radius: 50%;
+      background-color: $green-color;
+    
+      transition: transform .3s;
+    }
+
+    &--work--on::after {
+      transform: translateX(200%);
+    }
+  }
+
+  &__switcher-text {
+    color: #222222CC;
+    &--color--white {
+      color: #22222266;
+    }
+  }
+
+  &__arrow {
+    background-image: url(../images/swing-trade/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 84px;
+    height: 79px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @include onDesktop {
+      margin-top: 0;
+    }
+  }
+
+  &__price {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    color: $color-dark;
+  }
+
+  &__price-text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    letter-spacing: 0.05em;
+    color: #22222266;
+  }
+
+  &__arrow-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include onDesktop {
+      flex-direction: row-reverse;
+      align-items: baseline;
+      gap: 40px;
+    }
+  }
+
+  &__blocks > div:nth-child(odd) {
+    background-color: #f5fcf7;
+  }
+  &__blocks {
+    margin-top: 100px;
+  }
+
+  &__button {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    margin-top: 30px;
+
+
+    background-color: $green-color;
+    color: $color-white;
+    width: 266px;
+    height: 52px;
+    padding: 16px 32px 16px 32px;
+    border-radius: 16px;
+    border: 0;
+    margin-inline: auto;
+
+    @include hover(transform, scale(1.1));
+    
+    &--desktop {
+      @include onDesktop {
+        position: absolute;
+        top: 90%;
+        right: 16%;
+      }
+    }
+  }
+
+  &__main-desktop {
+    display: none;
+
+    @include onDesktop {
+      display: block;
+    }
+  }
+
+  &__block:first-of-type {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+
+  &__subscriptions {
+    display: flex;
+    position: relative;
+    right: 4%;
+    justify-content: flex-end;
+    gap: 150px;
+  }
+}

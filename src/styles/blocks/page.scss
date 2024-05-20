@@ -1,0 +1,14 @@
+.page {
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+
+  scroll-behavior: smooth;
+
+  &__body {
+    margin: 0;
+    min-width: 320px;
+  }
+}
